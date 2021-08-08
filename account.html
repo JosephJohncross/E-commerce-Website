@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="/E-commerce/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+
+<body>
+
+    <!-------header-------->
+
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="/E-commerce/images/logo.png" alt="company logo" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="/E-commerce/index.html">Home</a></li>
+                        <li><a href="/E-commerce/products.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="#bottom">Contact</a></li>
+                        <li><a href="/E-commerce/account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="/E-commerce/images/cart.png" alt="cart image" width="27px" height="27px"></a>
+                <img src="/E-commerce/images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+        <div class="layout-page">
+            <div class="row head">
+                <div class="col-2 img-wrap">
+                    <img src="/E-commerce/images/image1.png" alt="Trademark Image">
+                </div>
+                <div class="row login">
+                    <div class="form-layout">
+                        <div class="about-header">
+                            <h3 onclick="login()">Login</h3>
+                            <h3 onclick="register()">Register</h3>
+                            <hr id="Indicator">
+                        </div>
+                        <div class="visibility-container">
+                            <div class="page-action"  id="PageAction">
+                                <form action="" id="RegistrationForm">
+                                    <div class="page register">
+                                        <input type="text" placeholder="Username">
+                                        <input type="email" placeholder="Email">
+                                        <input type="password" placeholder="Password">
+                                        <a href="" class="btn">Register</a>
+                                    </div>
+                                </form>
+                                <form action="">
+                                    <div class="page login" id="LoginForm">
+                                        <input type="text" placeholder="Username">
+                                        <input type="password" placeholder="Password">
+                                        <a href="" class="btn">Login</a>
+                                        <small>Forgot password</small>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+<!-------footer------>
+<div class="footer" id="bottom">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and IOS mobile</p>
+                <div class="app-logo">
+                    <img src="/E-commerce/images/play-store.png" alt="Play store img">
+                    <img src="/E-commerce/images/app-store.png" alt="App store image">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="/E-commerce/images/logo-white.png" alt="redstore-logo">
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <hr class="line">
+            <p>Copyright 2020 | Easy Tutorial</p>
+        </div>
+    </div>
+</div>
+
+
+<!-------js for toogle menu-------->
+
+<script>
+    var MenuItems =  document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if (MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+
+<!-- ---------js for Toggle Menu---------- -->
+
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegistrationForm = document.getElementById("RegistrationForm");
+    var Indicator = document.getElementById("Indicator");
+    var PageAction = document.getElementById("PageAction")
+
+    function register(){
+        RegistrationForm.style.opacity = "1";
+        LoginForm.style.opacity = "0";
+        RegistrationForm.style.visibility = "visible";
+        LoginForm.style.visibility = "hidden";
+        PageAction.style.transform = "translateY(0px)";
+        Indicator.style.transform = "translateX(158px)"
+    }
+
+    function login(){
+        RegistrationForm.style.opacity = "0";
+        LoginForm.style.opacity = "1";
+        RegistrationForm.style.visibility = "hidden";
+        LoginForm.style.visibility = "visible";
+        PageAction.style.transform = "translateY(-280px)";
+        Indicator.style.transform = "translateX(30px)";
+    }
+</script>
+
+</body>
+</html>

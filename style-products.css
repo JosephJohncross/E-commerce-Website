@@ -1,0 +1,76 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-image: none;
+}
+
+
+.row.row-2 {
+    justify-content: space-between;
+    margin: 6.25em auto 3.125em;
+
+}
+
+.row h2 {
+    margin-left: 1.5625em;
+    color: #555;
+}
+
+select {           /*-----check if select malfunctions------*/
+    margin: 0em 1.5625em 0em auto;
+    border: 1.5px solid #333;
+    padding: 5px;
+}
+
+select:focus {
+    outline: none;
+    border: 1.5px solid #ff523b;
+}
+
+.page-navigation {
+    display: flex;
+    flex: 0 1 100px;
+}
+
+.nav-5 {
+    margin: 0em .7em 7em 1em;
+    cursor: pointer;
+    min-width: 2em;
+    height: 2.3em;
+    box-shadow: 2px 2px 6px #d4d3d3;
+    transition: 0.3s ease;
+    border: .04px solid #b4b2b2;
+}
+
+.option {
+    text-align: center;
+    padding-top: .4em;
+}
+
+.nav-5:hover {
+    background-color: #ff523b;
+    border: transparent;
+    box-shadow: none;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .col-4 {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .row-2 h2 {
+        margin: 0px;
+
+    }
+    .row.row-2 select {
+        margin: 0px;
+    }
+}
