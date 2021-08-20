@@ -696,6 +696,7 @@ th:last-child {
     background-blend-mode: multiply;
     margin: 0px;
     padding: 0px;
+    margin-bottom: 30px;
 }
 
 .row.head {
