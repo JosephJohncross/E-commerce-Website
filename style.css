@@ -822,3 +822,45 @@ th:last-child {
     opacity: 0;
     transition: opacity .7s linear;
 }
+
+/**user account page styling **/
+.user-img{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    /* background-color: red; */
+    margin-left: 100px;
+}
+
+.user-img::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: silver;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    
+}
+
+.user-img:after {
+    content: "";
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: pink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%);
+    background-image: url(/images/gallery-2.jpg);
+    background-size: contain;
+}
+
+.user-address-details{
+    display: flex;
+}
