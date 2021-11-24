@@ -1,3 +1,8 @@
+:root{
+    --hue: 7;
+    --main-color: hsl(var(--hue), 100%, 62%)
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -71,7 +76,7 @@ p {
 
 .btn {
     display: inline-block;
-    background: #ff523b;
+    background: var(--main-color);
     color: #fff;
     padding: .5em 1.875em;
     margin: 1.875em 0em;
@@ -139,7 +144,7 @@ p {
     position: absolute;
     width: 5.5em;
     height: 0.2125em;
-    background: #ff523b;
+    background: var(--main-color);
     bottom: 0px;
     left: 50%;
     border-radius: 5px;
@@ -157,7 +162,7 @@ h4 {
 
 .rating .fas,
 .rating .far {
-    color: #ff523b;
+    color: var(--main-color);
 }
 
 .col-4:hover {
@@ -206,7 +211,7 @@ small {
 
 .fas.fa-quote-left {
     font-size: 2em;
-    color: #ff523b;
+    color: var(--main-color);
 }
 
 .col-3 p {
@@ -507,7 +512,7 @@ small {
 }
 
 .single-product input:focus {
-    border: 1px solid #ff523b;
+    border: 1px solid var(--main-color);
     outline: none;
 }
 
@@ -543,7 +548,7 @@ small {
 }
 
 .cart-row.row{
-    background-color: #ff523b;
+    background-color: var(--main-color);
     color: white;
 }
 
@@ -588,11 +593,11 @@ small {
 }
 
 .details p:last-child {
-    color: #ff523b;
+    color: var(--main-color);
 }
 
 .cart-row div hr {
-    background-color: #ff523b;
+    background-color: var(--main-color);
     height: 10px;
     width: 70%;
     justify-content: stretch;
@@ -626,12 +631,14 @@ table {
     display: flex;
     flex-wrap: wrap;
 }
-
+.table-header tr{
+    border-radius: 30px;
+}
 th {
     text-align: left;
     padding: 5px;
     color: #fff;
-    background-color: #ff523b;
+    background-color: var(--main-color);
     font-weight: normal;
 }
 
@@ -648,12 +655,12 @@ td input {
 }
 
 td input:focus {
-    border: 1px solid #ff523b;
+    border: 1px solid var(--main-color);
     outline: none;
 }
 
 td a {
-    color: #ff523b;
+    color: var(--main-color);
     font-size: 12px;
 }
 
@@ -671,7 +678,7 @@ td img {
 }
 
 .total-price table {
-    border-top: 3px solid #ff523b;
+    border-top: 3px solid var(--main-color);
     width: 100%;
     max-width: 394px;
 }
@@ -729,7 +736,7 @@ th:last-child {
     display: inline-blocks;
     position: absolute;
     justify-content: space-around;
-    margin-bottom: 4em;
+    /* margin-bottom: 4em; */
     position: relative;
     padding: 1em 1em;
 }
@@ -749,7 +756,7 @@ th:last-child {
 #Indicator {
     width: 100px;
     border: none;
-    background: #ff523b;
+    background: var(--main-color);
     height: 3px;
     margin-top: 29px;
     transform: translateX(158px);
@@ -791,7 +798,7 @@ th:last-child {
 }
 
 .page input:focus {
-    border: 1.3px solid #ff523b;
+    border: 1.3px solid var(--main-color);
 }
 
 .page a {
